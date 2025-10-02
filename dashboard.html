@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - CyberLearn</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-shield-alt"></i>
+                <span>CyberLearn</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="dashboard.html" class="active">Dashboard</a></li>
+                    <li><a href="admin.html" id="admin-link" style="display: none;">Admin</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons" id="auth-buttons">
+                <a href="login.html" class="btn btn-outline">Login</a>
+                <a href="register.html" class="btn btn-primary">Sign Up</a>
+            </div>
+            <div class="user-menu" id="user-menu" style="display: none;">
+                <div class="user-avatar" id="user-avatar">JD</div>
+                <a href="javascript:void(0)" onclick="logout()" class="btn btn-outline">Logout</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <div class="dashboard-layout">
+
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <h2>Navigation</h2>
+                <ul class="sidebar-menu">
+                    <li><a href="dashboard.html" class="active"><i class="fas fa-graduation-cap"></i> Dashboard</a></li>
+                    <li><a href="courses.html"><i class="fas fa-book-open"></i> My Courses</a></li>
+                    <li><a href="courses.html"><i class="fas fa-search"></i> Discover</a></li>
+                    <li><a href="wallet.html"><i class="fas fa-credit-card"></i> Wallet</a></li>
+                    <li><a href="#"><i class="fas fa-user"></i> Profile</a></li>
+                    <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+                    <li id="admin-menu-item" style="display: none;"><a href="admin.html"><i class="fas fa-users"></i> Admin Panel</a></li>
+                </ul>
+            </div>
+
+            <!-- Main Dashboard Content -->
+            <div class="main-content">
+                <div class="page-header">
+                    <h1>Dashboard</h1>
+                    <p>Welcome back, <span id="user-name">John Doe</span>! Continue your cybersecurity journey.</p>
+                </div>
+
+                <!-- Stats -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon icon-blue"><i class="fas fa-book-open"></i></div>
+                        <div class="stat-info">
+                            <h3 id="enrolled-courses">0</h3>
+                            <p>Enrolled Courses</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon icon-green"><i class="fas fa-graduation-cap"></i></div>
+                        <div class="stat-info">
+                            <h3>2</h3>
+                            <p>Certificates Earned</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon icon-purple"><i class="fas fa-chart-bar"></i></div>
+                        <div class="stat-info">
+                            <h3>65%</h3>
+                            <p>Overall Progress</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Continue Learning -->
+                <div class="course-card" style="margin-bottom: 2.5rem;">
+                    <div class="course-content">
+                        <h2>Continue Learning</h2>
+                        <div id="continue-learning">
+                            <!-- Continue learning courses will be populated here -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Achievements & AI Tutor -->
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem;">
+                    <div class="course-card">
+                        <div class="course-content">
+                            <h3>Recent Achievements</h3>
+                            <div style="margin-top: 1.5rem;">
+                                <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+                                    <i class="fas fa-award" style="color: #f59e0b; font-size: 1.25rem;"></i>
+                                    <span style="font-weight: 600;">Completed "Cybersecurity Basics" module</span>
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 0.75rem;">
+                                    <i class="fas fa-award" style="color: #f59e0b; font-size: 1.25rem;"></i>
+                                    <span style="font-weight: 600;">Scored 95% on Threat Landscape quiz</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="course-card">
+                        <div class="course-content">
+                            <h3>AI Tutor</h3>
+                            <p style="margin: 1.5rem 0; font-weight: 500;">
+                                Ask questions about your courses or cybersecurity concepts.
+                            </p>
+                            <a href="ai-tutor.html" class="btn btn-primary" style="display: inline-block;">Start Chat</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

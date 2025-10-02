@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wallet - CyberLearn</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-shield-alt"></i>
+                <span>CyberLearn</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="admin.html" id="admin-link" style="display: none;">Admin</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons" id="auth-buttons">
+                <a href="login.html" class="btn btn-outline">Login</a>
+                <a href="register.html" class="btn btn-primary">Sign Up</a>
+            </div>
+            <div class="user-menu" id="user-menu" style="display: none;">
+                <div class="user-avatar" id="user-avatar">JD</div>
+                <a href="javascript:void(0)" onclick="logout()" class="btn btn-outline">Logout</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <div class="dashboard-layout">
+
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <h2>Navigation</h2>
+                <ul class="sidebar-menu">
+                    <li><a href="dashboard.html"><i class="fas fa-graduation-cap"></i> Dashboard</a></li>
+                    <li><a href="courses.html"><i class="fas fa-book-open"></i> My Courses</a></li>
+                    <li><a href="courses.html"><i class="fas fa-search"></i> Discover</a></li>
+                    <li><a href="wallet.html" class="active"><i class="fas fa-credit-card"></i> Wallet</a></li>
+                    <li><a href="#"><i class="fas fa-user"></i> Profile</a></li>
+                    <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+                </ul>
+            </div>
+
+            <!-- Wallet Main Content -->
+            <div class="main-content">
+                <div class="page-header">
+                    <h1><i class="fas fa-credit-card"></i> Crypto Wallet</h1>
+                    <p>Manage your cryptocurrency payments and wallet address</p>
+                </div>
+
+                <!-- Wallet Address -->
+                <div class="course-card" style="margin-bottom: 2.5rem;">
+                    <div class="course-content">
+                        <h3>Your Wallet Address</h3>
+                        <div class="wallet-address" id="wallet-address">
+                            ••••••••••••••••••••••••••••••••••••••••••••
+                        </div>
+                        <button class="btn btn-outline" id="toggle-address" style="margin-top: 1.25rem;">
+                            Show Address
+                        </button>
+                        <p style="margin-top: 1.25rem; color: var(--gray); font-size: 0.95rem; font-weight: 500;">
+                            This address is used for receiving refunds and course certificates on blockchain.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Transaction History -->
+                <div class="course-card">
+                    <div class="course-content">
+                        <h3>Transaction History</h3>
+                        <div style="margin-top: 1.5rem;">
+                            <div style="display: flex; justify-content: space-between; padding: 1.25rem 0; border-bottom: 1px solid var(--border);">
+                                <div>
+                                    <h4 style="font-weight: 700; color: var(--dark);">Course Payment</h4>
+                                    <p style="color: var(--gray); font-size: 0.95rem; font-weight: 500;">Introduction to Cybersecurity</p>
+                                </div>
+                                <div style="text-align: right;">
+                                    <p style="color: var(--success); font-weight: 700;">-0.0012 BTC</p>
+                                    <p style="color: var(--gray); font-size: 0.95rem; font-weight: 500;">Jan 15, 2024</p>
+                                </div>
+                            </div>
+
+                            <div style="display: flex; justify-content: space-between; padding: 1.25rem 0;">
+                                <div>
+                                    <h4 style="font-weight: 700; color: var(--dark);">Refund</h4>
+                                    <p style="color: var(--gray); font-size: 0.95rem; font-weight: 500;">Ethical Hacking Fundamentals</p>
+                                </div>
+                                <div style="text-align: right;">
+                                    <p style="color: var(--danger); font-weight: 700;">+0.0024 BTC</p>
+                                    <p style="color: var(--gray); font-size: 0.95rem; font-weight: 500;">Feb 3, 2024</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
